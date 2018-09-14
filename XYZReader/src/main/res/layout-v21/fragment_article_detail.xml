@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-            app:expandedTitleMarginStart="72dp"
+            app:expandedTitleMarginStart="@dimen/detail_Toolbar_margin_start"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -37,6 +37,7 @@
                     app:layout_collapseMode="parallax"/>
 
                 <ImageView
+                    android:contentDescription="@string/article_detail_scrim"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/detail_photo_height"
                     android:background="@drawable/photo_background_protection" />
@@ -125,7 +126,7 @@
         android:stateListAnimator="@anim/fab_state_list_anim"
         android:background="@drawable/add_fab_background"
         android:layout_gravity="bottom|end"
-        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
         android:layout_width="56dp"
         android:layout_height="56dp"

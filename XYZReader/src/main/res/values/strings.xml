@@ -9,5 +9,9 @@
 
     <string name="up">Up</string>
     <string name="article_photo_transition">photo transition</string>
+    <string name="list_thumbnail_content_description">article_thumbnail_image</string>
+    <string name="list_item_scrim_content_description">list item scrim</string>
+    <string name="article_detail_image">article image</string>
+    <string name="article_detail_scrim">article_image_scrim</string>
 
 </resources>

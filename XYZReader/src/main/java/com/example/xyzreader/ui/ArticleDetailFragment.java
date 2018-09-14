@@ -20,6 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
@@ -90,8 +91,9 @@ public class ArticleDetailFragment extends Fragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            //getActivity().startPostponedEnterTransition();
+            getActivity().startPostponedEnterTransition();
         }
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
@@ -116,6 +118,7 @@ public class ArticleDetailFragment extends Fragment implements
         // the fragment's onCreate may cause the same LoaderManager to be dealt to multiple
         // fragments because their mIndex is -1 (haven't been added to the activity yet). Thus,
         // we do this in onActivityCreated.
+
         getLoaderManager().initLoader(0, null, this);
     }
 
@@ -124,6 +127,7 @@ public class ArticleDetailFragment extends Fragment implements
             Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
+
         android.support.v7.widget.Toolbar toolbar = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             toolbar = (android.support.v7.widget.Toolbar) mRootView.findViewById(R.id.app_bar);
@@ -131,7 +135,7 @@ public class ArticleDetailFragment extends Fragment implements
         getActivityCast().setSupportActionBar(toolbar);
 
         mCoordinatorLayout = (CoordinatorLayout)
-                mRootView.findViewById(R.id.detail_coordinator_layout);;
+                mRootView.findViewById(R.id.detail_coordinator_layout);
 
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
@@ -240,9 +244,6 @@ public class ArticleDetailFragment extends Fragment implements
                                 Palette p = Palette.generate(bitmap, 12);
                                 mMutedColor = p.getDarkMutedColor(0xFF333333);
                                 mPhotoView.setImageBitmap(imageContainer.getBitmap());
-                                //TODO remove this if necessary
-                                //mRootView.findViewById(R.id.meta_bar)
-                                //        .setBackgroundColor(mMutedColor);
                                 updateStatusBar();
                             }
                         }

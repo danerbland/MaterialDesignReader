@@ -9,6 +9,17 @@
     <dimen name="fab_margin">20dp</dimen>
 
     <dimen name="detail_image_height">300dp</dimen>
+    <dimen name="list_article_title_padding_horizontal">16dp</dimen>
+    <dimen name="list_article_title_padding_top">16dp</dimen>
+    <dimen name="list_article_title_padding_bottom">4dp</dimen>
+    <dimen name="list_article_subtitle_padding_bottom">8dp</dimen>
+    <dimen name="list_recyclerview_padding_top">116dp</dimen>
+    <dimen name="list_recyclerview_padding_bottom">28dp</dimen>
+    <dimen name="list_toolbar_height">112dp</dimen>
+    <dimen name="list_toolbar_container_elevation">8dp</dimen>
+    <dimen name="fab_width">56dp</dimen>
+    <dimen name="fab_height">56dp</dimen>
+    <dimen name="detail_Toolbar_margin_start">72dp</dimen>
     <!--<dimen name="detail_toolbar_layout_gravity">bottom</dimen>-->
 
 </resources>
